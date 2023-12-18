@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --white: #FFF;
+  --danger: #A11707;
+  --light-green: #19976A;
+  --darker-green: #125C42;
+  --background-color: #0B0D0FE6;
+}
+
 * {
   mat-tab-group { margin: 2rem; }
   mat-card-title { font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; }
@@ -10,7 +18,7 @@ html, body { height: 100%; }
 
 body {
   margin: 0;
-  background-color: #0b0d0fe6;
+  background-color: var(--background-color);
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
@@ -21,7 +29,7 @@ body {
   margin-top: 1vh;
   margin-left: .7vw;
   flex-direction: row;
-  background-color: #19976A;
+  background-color: var(--light-green);
   justify-content: space-between;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
@@ -31,7 +39,7 @@ body {
 
 .header_title {
   display: flex;
-  color: white;
+  color: var(--white);
   font-size: 40px !important;
   margin-left: 2rem !important;
   margin-top: 1.5rem !important;
@@ -40,9 +48,9 @@ body {
 
 .header_button {
   display: flex;
-  color: white !important;
+  color: var(--white) !important;
   font-size: 20px !important;
-  background-color: #125C42;
+  background-color: var(--darker-green);
   margin-right: 2rem !important;
   margin-top: 1.5rem !important;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
@@ -58,7 +66,7 @@ body {
 }
 
 .todo_form_title {
-  color: white;
+  color: var(--white);
   font-size: 30px !important;
   margin-top: 1rem !important;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
@@ -74,18 +82,18 @@ body {
 }
 
 .todo_form_input { width: 90% !important; }
-.todo_form_delete_button { background-color: #A11707; }
-.todo_form_success_button { background-color: #125C42; }
+.todo_form_delete_button { background-color: var(--danger); }
+.todo_form_success_button { background-color: var(--darker-green); }
 
 .todo_card {
   width: 80%;
   margin: 1rem auto;
   border-radius: 1.8rem !important;
-  background-color: #19976A !important;
+  background-color: var(--light-green) !important;
 }
 
 .todo_card_title {
-  color: white !important;
+  color: var(--white) !important;
   font-size: 25px !important;
 }
 
@@ -104,6 +112,6 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 23px !important;
-  color: #19976A !important;
+  color: var(--light-green) !important;
   margin-top: 1.5rem !important;
 }
