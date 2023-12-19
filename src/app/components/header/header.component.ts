@@ -1,13 +1,17 @@
-// #region Angular imports
-import { Component } from '@angular/core';
+// #region Angular's imports
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // #endregion
 
-// #region Material imports
+// #region Project's imports
+import { TodoFormComponent } from '../todo-form/todo-form.component';
+// #endregion
+
+// #region Material's imports
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 // #endregion
 
 @Component({
@@ -23,7 +27,13 @@ import { MatDividerModule } from '@angular/material/divider';
   ],
 })
 export class HeaderComponent {
+  private dialogService = inject(MatDialog);
+
   public handleOpenModal(): void {
-    console.log("It's me, abestado.");
+    this.dialogService
+      .open(TodoFormComponent, {
+        width: '50vw',
+        maxHeight: '80vh',
+      });
   }
 }

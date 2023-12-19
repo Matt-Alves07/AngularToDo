@@ -1,0 +1,34 @@
+<form [formGroup]="todosForm" (ngSubmit)="handleCreateNewTodo()">
+  <section class="todo-form-card">
+    <h1 class="todo-form-title">Add new task</h1>
+
+    <mat-form-field color="accent" appearance="outline" class="todo-form-input">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="title" placeholder="Name..." />
+    </mat-form-field>
+
+    <mat-form-field color="accent" appearance="outline" class="todo-form-input">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        formControlName="description"
+        placeholder="Description..."
+      ></textarea>
+    </mat-form-field>
+
+    <div class="todo-form-actions">
+      <button mat-raised-button class="todo-form-sucess-button" type="submit">
+        Adicionar
+      </button>
+
+      <button
+        mat-raised-button
+        color="warn"
+        type="button"
+        (click)="handleCloseModal()"
+      >
+        Cancelar
+      </button>
+    </div>
+  </section>
+</form>
