@@ -1,0 +1,71 @@
+<mat-tab-group color="accent" *ngIf="todoList().length > 0; else withoutTasks">
+  <mat-tab label="On going">
+    <div *ngFor="let task of todoList()">
+      <mat-card
+        class="todo-card"
+        *ngIf="task?.isDone === false"
+      >
+          <mat-card-header class="todo-card-title">
+              <mat-card-title>{{task.title}}</mat-card-title>
+
+              <mat-card-subtitle class="todo-card-subtitle">
+                  {{task.description}}
+              </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-actions align="end">
+              <button
+                class="header-button check-button"
+                mat-icon-button
+                aria-label="Set task as undone"
+                (click)="handleDoneClick(task.id)"
+              ><mat-icon>done_all</mat-icon></button>
+
+              <button
+                class="header-button check-button todo-form-delete-button"
+                mat-icon-button
+                aria-label="Delete task"
+                (click)="handleDeleteClick(task)"
+              ><mat-icon>delete_forever</mat-icon></button>
+          </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Done">
+    <div *ngFor="let task of todoList()">
+      <mat-card
+        class="todo-card"
+        *ngIf="task?.isDone === true"
+      >
+          <mat-card-header class="todo-card-title">
+              <mat-card-title>{{task.title}}</mat-card-title>
+
+              <mat-card-subtitle class="todo-card-subtitle">
+                  {{task.description}}
+              </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-actions align="end">
+            <button
+              class="header-button check-button"
+              mat-icon-button
+              aria-label="Set task as undone"
+              (click)="handleDoneClick(task.id)"
+            ><mat-icon>done_all</mat-icon></button>
+
+            <button
+              class="header-button check-button todo-form-delete-button"
+              mat-icon-button
+              aria-label="Delete task"
+              (click)="handleDeleteClick(task)"
+            ><mat-icon>delete_forever</mat-icon></button>
+          </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<ng-template #withoutTasks>
+  <h3 class="warn-message">There are no tasks</h3>
+</ng-template>

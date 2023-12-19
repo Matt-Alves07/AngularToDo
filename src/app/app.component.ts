@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 // #region Project's imports
 import { HeaderComponent } from './components/header/header.component';
+import { TodoCardComponent } from './components/todo-card/todo-card.component';
 // #endregion
 
 @Component({
@@ -13,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [
     CommonModule,
     HeaderComponent,
+    TodoCardComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
