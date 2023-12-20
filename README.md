@@ -1,6 +1,6 @@
-# TodoList
+# TO-DO LIST
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli), version 16.2.2, following the instructions from the Udemy course, wich you can check [here](https://www.udemy.com/course/curso-de-angular-15-do-iniciante-ao-especialista/). It was developed using signals and local storage to control the state of every task created, and diplay every single one of them, splitted in tabs, where you can see on going tasks, and also done tasks. You can access this app by clicking [here](https://angular-to-do-zeta.vercel.app/).
 
 ## Development server
 
